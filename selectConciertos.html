@@ -28,19 +28,12 @@
             let t=0;
             let n;
             let val=document.getElementsByTagName("select")[0].value;
-            if(val=="acdc"){
-                t=opciones_conciertos[0].precio;
-                n=opciones_conciertos[0].nombre;
+            for (let i = 0; i < opciones_conciertos.length; i++) {
+                if(val==opciones_conciertos[i].valor){
+                    t=opciones_conciertos[i].precio;
+                    n=opciones_conciertos[i].nombre;
+                }
             }
-            if(val=="baron"){
-                t=opciones_conciertos[1].precio;
-                n=opciones_conciertos[1].nombre;
-            }
-            if(val=="iron"){
-                t=opciones_conciertos[2].precio;
-                n=opciones_conciertos[2].nombre;
-            }
-
             f.innerHTML="El concierto "+n+" vale "+t;
             document.getElementsByTagName("div")[1].appendChild(f);
         }
@@ -48,19 +41,12 @@
             let t=0;
             let n;
             let val=document.getElementsByTagName("select")[0].value;
-            if(val=="acdc"){
-                t=opciones_conciertos[0].precio;
-                n=opciones_conciertos[0].nombre;
+            for (let i = 0; i < opciones_conciertos.length; i++) {
+                if(val==opciones_conciertos[i].valor){
+                    t=opciones_conciertos[i].precio;
+                    n=opciones_conciertos[i].nombre;
+                }
             }
-            if(val=="baron"){
-                t=opciones_conciertos[1].precio;
-                n=opciones_conciertos[1].nombre;
-            }
-            if(val=="iron"){
-                t=opciones_conciertos[2].precio;
-                n=opciones_conciertos[2].nombre;
-            }
-
             p.innerHTML="El concierto "+n+" vale "+t;
             
         }
